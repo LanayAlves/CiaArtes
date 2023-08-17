@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vendas de Expositores</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cia das Artes</h1>
+    <form id="form-vendas">
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item"><br>
+
+        <label for="expositor">Expositor:</label>
+        <input type="text" id="expositor" name="expositor"><br>
+
+        <label for="forma-pagamento">Forma de pagamento:</label>
+        <select id="forma-pagamento" name="forma-pagamento">
+            <option value="">Selecione</option>
+            <option value="Crédito à vista">Crédito à vista</option>
+            <option value="Crédito parcelado">Crédito parcelado</option>
+            <option value="Débito">Débito</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Pix">Pix</option>
+        </select><br>
+
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" name="valor"><br>
+
+        <button type="submit">Adicionar venda</button>
+        <button type="button" onclick="limparFormulario()">Limpar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Item</th>
+                <th>Expositor</th>
+                <th>Forma de pagamento</th>
+                <th>Preço</th>
+                <th>Taxa</th>
+                <th>Valor Final</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-vendas">
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="5">Desconto do dia</th>
+                <td id="total-desconto"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th colspan="5">Total Geral</th>
+                <td></td>
+                <td id="total"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="index.js">
+    </script>
+</body>
+
+</html>

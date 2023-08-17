@@ -1,0 +1,33 @@
+
+
+/* Estilos CSS */
+body {
+  font-family: Arial, sans-serif;
+}
+h1, h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+#totais-expositores {
+  margin-top: 20px;
+  list-style-type: none;
+}
+#totais-expositores li {
+  margin-bottom: 10px;
+}
+#totais-expositores li span {
+  font-weight: bold;
+}
